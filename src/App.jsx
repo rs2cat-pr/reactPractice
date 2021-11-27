@@ -16,14 +16,15 @@ import ColorfulMessage from "./components/ColorfulMessage";
 const App = () => {
   //useStateから配列代入で取り出す
   /**カウントアップ用useState */
-  const [num, setNum] = useState(0);
+  //setnumごとに状態を更新していく
+  const [num, setNum] = useState(100);
   console.log("再レンダリング");
   /**画面表示用useState */
   const [faceShowFlag, setFaceShowFlag] = useState(false);
 
   //ボタンが押された際の関数を定義
   const onClickCountup = () => {
-    setNum(num + 1);
+    setNum(num + 5);
   };
 
   const onClickSwitchShowFlag = () => {
